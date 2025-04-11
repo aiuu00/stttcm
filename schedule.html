@@ -1,1 +1,42 @@
-<!DOCTYPE html><html lang='zh-TW'><head><meta charset='UTF-8'><title>門診時間</title><link rel='stylesheet' href='style.css'></head><body><h1>門診時間</h1><img src='schedule.jpg' alt='門診時間表' style='max-width:100%'></body></html>
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>門診時間｜順天堂大墩中醫診所</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="IMG_9841.jpeg" alt="Logo" class="logo" />
+      <h1>順天堂大墩中醫診所</h1>
+      <button class="menu-toggle">&#9776;</button>
+    </div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">首頁</a></li>
+        <li><a href="services.html">服務項目</a></li>
+        <li><a href="schedule.html">門診時間</a></li>
+        <li><a href="about.html">關於我們</a></li>
+        <li><a href="contact.html">聯絡我們</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section>
+    <h2>門診時間</h2>
+    <p>週一至週六：09:00 – 12:00 / 14:00 – 18:00 / 18:30 - 21:30 週日休診</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 順天堂大墩中醫診所</p>
+  </footer>
+
+  <script>
+    document.querySelector('.menu-toggle').addEventListener('click', () => {
+      document.querySelector('.navbar').classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

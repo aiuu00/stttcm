@@ -12,7 +12,7 @@ body {
 
 /* 頁首區塊 */
 header {
-  background-color: #f47983; /* 桃紅色標題區 */
+  background-color: #f5f5f5;
   border-bottom: 1px solid #ddd;
   position: sticky;
   top: 0;
@@ -36,7 +36,7 @@ header {
   font-size: 24px;
   font-weight: bold;
   margin: 0;
-  color: #ffffff; /* 白色標題字 */
+  color: #333333;
 }
 
 /* 導覽列樣式 */

@@ -1,55 +1,128 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>順天堂大墩中醫診所</title>
-      <style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>順天堂大墩中醫診所</title>
+  <meta name="description" content="順天堂大墩中醫診所提供專業中醫療程，改善睡眠障礙、減重、轉骨等問題。">
+  <meta name="keywords" content="中醫, 順天堂, 台中中醫, 針灸, 減重, 轉骨, 體雕">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Noto Sans TC", sans-serif;
+    }
+
+    header {
+      background-color: #ffffff;
+      border-bottom: 1px solid #ddd;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
     .logo-container {
       display: flex;
       align-items: center;
+      padding: 10px 20px;
     }
 
     .logo {
-      width: 50px;
+      width: 120px;
       height: auto;
       margin-right: 10px;
     }
 
-    h1 {
+    header h1 {
       font-size: 24px;
       font-weight: bold;
+      margin: 0;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 28px;
+      cursor: pointer;
+      margin-left: auto;
+    }
+
+    .navbar ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      list-style: none;
+      margin: 0;
+      padding: 10px 0;
+      gap: 20px;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      .navbar ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: #f8f8f8;
+        padding: 10px 0;
+        border-top: 1px solid #ddd;
+      }
+
+      .navbar.active ul {
+        display: flex;
+      }
     }
   </style>
-    </head>
+</head>
 <body>
   <header>
     <div class="logo-container">
-      <img src="IMG_9840.jpeg" alt="Logo" class="logo">
-    <meta name="description" content="順天堂大墩中醫診所提供專業中醫療程，改善睡眠障礙、減重、轉骨等問題。">
-    <meta name="keywords" content="中醫, 順天堂, 台中中醫, 針灸, 減重, 轉骨, 體雕">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <h1>順天堂大墩中醫診所</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">首頁</a></li>
-                <li><a href="services.html">服務項目</a></li>
-                <li><a href="schedule.html">門診時間</a></li>
-                <li><a href="about.html">關於我們</a></li>
-                <li><a href="contact.html">聯絡我們</a></li>
-            </ul>
-        </nav>
-    </header>
-    <section>
-        <h2>歡迎光臨</h2>
-        <p>順天堂大墩中醫診所提供溫和有效的中醫療法，結合現代與傳統，提升健康與生活品質。</p>
-        <img src="clinic.jpg" alt="診所門面" style="width:100%;max-width:800px">
-    </section>
-    <footer>
-        <p>&copy; 2025 順天堂大墩中醫診所</p>
-    </footer>
+      <img src="IMG_9840.jpg" alt="Logo" class="logo">
+      <h1>順天堂大墩中醫診所</h1>
+      <button class="menu-toggle" aria-label="切換選單">&#9776;</button>
+    </div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">首頁</a></li>
+        <li><a href="services.html">服務項目</a></li>
+        <li><a href="schedule.html">門診時間</a></li>
+        <li><a href="about.html">關於我們</a></li>
+        <li><a href="contact.html">聯絡我們</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section>
+    <h2>歡迎光臨</h2>
+    <p>順天堂大墩中醫診所提供溫和有效的中醫療法，結合現代與傳統，提升健康與生活品質。</p>
+    <img src="clinic.jpg" alt="診所門面" style="width:100%; max-width:800px;">
+  </section>
+
+  <footer>
+    <p>&copy; 2025 順天堂大墩中醫診所</p>
+  </footer>
+
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navbar = document.querySelector('.navbar');
+
+    menuToggle.addEventListener('click', () => {
+      navbar.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>

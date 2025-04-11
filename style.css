@@ -5,29 +5,28 @@
   padding: 0;
 }
 
-/* 設定字型及顏色 */
 body {
-  background-color: #f5f5f5; /* 淺米黃色背景 */
+  background-color: #f5f5f5;
   font-family: "Noto Sans TC", sans-serif;
-  color: #333333; /* 深灰色文字 */
+  color: #616130; /* 全站文字主色：深橄欖綠 */
   line-height: 1.6;
 }
 
 /* 頁首區塊 */
 header {
-  background-color: #a8d5ba; /* 淺綠色背景 */
+  background-color: #d6d6d6; /* 標題背景：淺灰色 */
   padding: 20px;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #ccc;
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 
-/* Logo與標題樣式 */
 .logo-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .logo {
@@ -37,14 +36,13 @@ header {
 }
 
 .logo-container h1 {
-  font-size: 28px; /* 頁首標題大小調整 */
+  font-size: 28px;
   font-weight: bold;
   margin: 0;
-  color: #ffffff; /* 白色標題字 */
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* 字體陰影增加可讀性 */
+  color: #616130; /* 標題文字色：深橄欖綠 */
 }
 
-/* 導覽列樣式 */
+/* 選單 */
 .navbar ul {
   display: flex;
   justify-content: center;
@@ -55,26 +53,27 @@ header {
 
 .navbar a {
   text-decoration: none;
-  color: #ffffff; /* 白色文字 */
+  color: #616130;
   font-weight: bold;
   font-size: 18px;
   transition: color 0.3s;
 }
 
 .navbar a:hover {
-  color: #5c4033; /* 深棕色滑過效果 */
+  color: #3f3f1f; /* 滑過更深的橄欖綠 */
 }
 
-/* 響應式選單：手機版 */
+/* 漢堡按鈕 */
 .menu-toggle {
   display: none;
   background: none;
   border: none;
   font-size: 28px;
   cursor: pointer;
-  color: #ffffff;
+  color: #616130;
 }
 
+/* 響應式手機選單 */
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
@@ -84,43 +83,44 @@ header {
     display: none;
     flex-direction: column;
     align-items: center;
-    background-color: #D6D6AD; 
+    background-color: #D6D6AD; /* 拉頁底色 */
     padding: 10px 0;
-    border-top: 1px solid #ddd;
+    border-top: 1px solid #ccc;
   }
 
   .navbar.active ul {
     display: flex;
   }
 
-  /* 修正背景顏色與文字顏色 */
   .navbar a {
-    color: #333333; /* 深灰色文字 */
+    color: #616130; /* 拉頁文字色 */
   }
 
   .navbar a:hover {
-    color: #5c4033; /* 深棕色滑過效果 */
+    color: #3f3f1f;
   }
 }
 
-/* 主要內容區 */
+/* 內容區 */
 section {
   padding: 20px;
-  background-color: #ffffff; /* 內容區背景 */
-  margin: 20px 0;
+  background-color: #ffffff;
+  margin: 20px auto;
   border-radius: 8px;
+  max-width: 960px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
 section h2 {
   font-size: 26px;
   font-weight: bold;
   margin-bottom: 10px;
-  color: #333333; /* 深灰色標題 */
+  color: #616130;
 }
 
 section p {
   font-size: 16px;
-  color: #5c4033; /* 深棕色文字 */
+  color: #4e4e2f;
   margin-bottom: 20px;
 }
 
@@ -136,7 +136,7 @@ section img {
 
 /* 頁尾 */
 footer {
-  background-color: #333333;
+  background-color: #616130;
   color: #ffffff;
   padding: 20px;
   text-align: center;
@@ -144,7 +144,7 @@ footer {
 
 /* 按鈕樣式 */
 button {
-  background-color: #616130; /* 深棕色 */
+  background-color: #616130;
   color: #ffffff;
   border: none;
   padding: 10px 20px;
@@ -154,5 +154,5 @@ button {
 }
 
 button:hover {
-  background-color: #a8d5ba; /* 淺綠色滑過 */
+  background-color: #3f3f1f;
 }

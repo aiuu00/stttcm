@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://aiuu00.github.io/stttcm/sitemap.xml
